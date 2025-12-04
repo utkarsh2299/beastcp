@@ -4,6 +4,9 @@ A high-performance file copying tool with resume, verification, tqdm progress, a
 
 PyPI: https://pypi.org/project/beastcp/
 
+[![PyPI Version](https://img.shields.io/pypi/v/beastcp.svg)](https://pypi.org/project/beastcp/)
+
+
 # beastcp
 
 `beastcp` is a high-performance file copying and synchronization utility written in Python.  
