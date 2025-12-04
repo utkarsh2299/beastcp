@@ -1,4 +1,4 @@
-# beastcp
+# beastCP
 
 A high-performance file copying tool with resume, verification, tqdm progress, and multithreaded directory sync.
 
@@ -7,7 +7,7 @@ PyPI: https://pypi.org/project/beastcp/
 [![PyPI Version](https://img.shields.io/pypi/v/beastcp.svg)](https://pypi.org/project/beastcp/)
 
 
-# beastcp
+# beastCP
 
 `beastcp` is a high-performance file copying and synchronization utility written in Python.  
 It combines the familiar behavior of the Unix `cp` command with advanced features such as:
