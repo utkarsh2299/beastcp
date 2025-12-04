@@ -53,7 +53,7 @@ def copy_file(src, dst, resume=True, verify=True):
 
     if verify:
         if sha256sum(src) != sha256sum(dst):
-            raise click.ClickException(f"❌ Hash mismatch for {src}")
+            raise click.ClickException(f"Hash mismatch for {src}")
 
     return "copied"
 
@@ -65,7 +65,7 @@ def copy_directory(src, dst, workers=4, **kwargs):
 
     files = [p for p in src.rglob("*") if p.is_file()]
 
-    click.echo(f"📁 Found {len(files)} files, copying using {workers} threads")
+    click.echo(f"Found {len(files)} files, copying using {workers} threads")
 
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futures = [
@@ -85,14 +85,14 @@ def copy_directory(src, dst, workers=4, **kwargs):
 @click.option("--force", "-f", is_flag=True, help="Force overwrite files.")
 def cli(src, dst, threads, no_resume, no_verify, force):
     """
-    🚀 BEASTCP: A beast-mode cp/rsync + tqdm command with resume, verify,
+    BEASTCP: A beast-mode cp/rsync + tqdm command with resume, verify,
     threading, and beautiful progress.
     """
     src = Path(src)
     dst = Path(dst)
 
     if dst.exists() and not force:
-        raise click.ClickException("❌ Destination exists. Use --force to overwrite.")
+        raise click.ClickException("Destination exists. Use --force to overwrite.")
 
     options = dict(resume=not no_resume, verify=not no_verify)
 
@@ -101,4 +101,4 @@ def cli(src, dst, threads, no_resume, no_verify, force):
     else:
         copy_directory(src, dst, workers=threads, **options)
 
-    click.echo("✅ Done — BEAST MODE COPY COMPLETE!")
+    click.echo("Done — COPY COMPLETE!")
