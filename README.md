@@ -125,3 +125,9 @@ beastcp movie.mkv /media/storage/ --no-verify
 - Uses the same file copying routine for each file
 
 This design allows `beastcp` to efficiently copy both large singular files and many small files.
+
+## Contributions
+
+I have create the code for my personal use and haven't tested the code thoroughly and it might have bugs. 
+
+### This work is open for contributions.
